@@ -1,11 +1,25 @@
 {
   "name": "vue-yy-ui",
+  "description": "一个基于Vue的移动端UI库",
   "version": "0.1.0",
-  "private": true,
+  "author": "wangminghuan",
+  "license": "MIT",
+  "private": false,
+  "main": "dist/yy-ui.common.js",
+  "keywords": [
+    "vue",
+    "ui",
+    "yy-ui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wangminghuan/vue-yy-ui"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build-bundle": "vue-cli-service build --target lib --name yy-ui ./src/bundle.js"
   },
   "dependencies": {
     "vue": "^2.5.17"

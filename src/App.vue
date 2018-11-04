@@ -1,10 +1,12 @@
 <template>
-  <div id="app">
+  <div id="app" >
     <button @click="handleClick">点我展示toast</button>
+    <back-top></back-top>
   </div>
 </template>
 
 <script>
+
 export default {
   methods:{
     handleClick(){
@@ -22,5 +24,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  height: 2000px;
 }
 </style>
