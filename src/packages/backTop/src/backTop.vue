@@ -1,5 +1,5 @@
 <template>
-  <div class="yy-ui-back-top"
+  <div :class="cssPrefix+'back-top'"
        @click="handleClick">
     <span :class="isShow? 'show': 'hide'"></span>
   </div>
@@ -83,8 +83,8 @@ export default {
 </script>
 
 <style lang="scss">
-$component-namespace: 'yy-ui';
-.#{$component-namespace} {
+@import "../../../styles/common/variables.scss";
+.#{$css-prefix} {
   &-back-top {
     position: fixed;
     right: 10px;

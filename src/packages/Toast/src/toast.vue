@@ -1,10 +1,9 @@
 <template>
-  <transition name="yy-ui-toast-pop">
-    <div class="yy-ui-toast"
-         v-show="visible"
-         :class="customClass"
+  <transition :name="cssPrefix+'toast-pop'">
+    <div v-show="visible"
+         :class="[cssPrefix+'toast',customClass]"
          style="padding:10px">
-      <span class="yy-ui-toast-text">{{ message }}</span>
+      <span class="toast-text">{{ message }}</span>
     </div>
   </transition>
 </template>
@@ -53,43 +52,44 @@ export default {
 };
 </script>
 <style lang="scss">
-.yy-ui-toast {
-  position: fixed;
-  max-width: 80%;
-  border-radius: 5px;
-  background: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  box-sizing: border-box;
-  text-align: center;
-  z-index: 1;
-  transition: opacity 0.3s linear;
-  &.is-placebottom {
-    bottom: 50px;
-    left: 50%;
-    transform: translate(-50%);
-  }
-
-  &.is-placemiddle {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  &.is-placetop {
-    top: 50px;
-    left: 50%;
-    transform: translate(-50%);
-  }
-
-  .yy-ui-toast-text {
-    font-size: 14px;
-    display: block;
+@import '../../../styles/common/variables.scss';
+.#{$css-prefix} {
+  &-toast {
+    position: fixed;
+    max-width: 80%;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    box-sizing: border-box;
     text-align: center;
-  }
-}
+    z-index: 1;
+    transition: opacity 0.3s linear;
+    &.is-placebottom {
+      bottom: 50px;
+      left: 50%;
+      transform: translate(-50%);
+    }
 
-.yy-ui-toast-pop-enter,
-.yy-ui-toast-pop-leave-active {
-  opacity: 0;
+    &.is-placemiddle {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &.is-placetop {
+      top: 50px;
+      left: 50%;
+      transform: translate(-50%);
+    }
+    .toast-text {
+      font-size: 14px;
+      display: block;
+      text-align: center;
+    }
+  }
+  &-toast-pop-enter,
+  &-toast-pop-leave-active {
+    opacity: 0;
+  }
 }
 </style>

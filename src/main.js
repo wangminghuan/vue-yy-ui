@@ -1,7 +1,5 @@
 import Vue from 'vue';
-import App from './App.vue'
-// import Toast from "./packages/Toast/index.js";
-// import backTop from "./packages/backTop/index.js";
+import App from './App.vue';
 import {Toast,BackTop} from "./bundle";
 Vue.config.productionTip = false;
 Vue.component(BackTop.name,BackTop);

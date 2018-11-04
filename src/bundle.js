@@ -1,6 +1,10 @@
+import Vue from "vue";
+import mixin from "./mixins/index";
+import "./styles/base.scss";
 import Toast from "./packages/Toast/index";
 import BackTop from "./packages/backTop/index";
-const version = '1.0.0';
+const Version = '1.0.0';
+Vue.mixin(mixin)
 BackTop.install = function (Vue) {
   Vue.component(BackTop.name, BackTop)
 }
@@ -18,10 +22,9 @@ const install = (Vue, opts = {})=> {
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);
 }
-
 export {
  Toast,
- version,
+ Version,
  BackTop
 }
 // export default Toast
