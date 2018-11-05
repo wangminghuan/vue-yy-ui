@@ -1,5 +1,5 @@
 <template>
-  <div id="app" >
+  <div id="app">
     <button @click="handleClick">点我展示toast</button>
     <back-top></back-top>
   </div>
@@ -8,9 +8,13 @@
 <script>
 
 export default {
-  methods:{
-    handleClick(){
-      this.$toast("hello world")
+  methods: {
+    handleClick () {
+      this.$toast({
+        message: "hellow",
+        duration: 2000,
+        position: "bottom"
+      })
     }
   }
 }

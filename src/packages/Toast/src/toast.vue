@@ -1,7 +1,7 @@
 <template>
-  <transition :name="cssPrefix+'toast-pop'">
+  <transition :name="cssPrefix+'-toast-pop'">
     <div v-show="visible"
-         :class="[cssPrefix+'toast',customClass]"
+         :class="[cssPrefix+'-toast',customClass]"
          style="padding:10px">
       <span class="toast-text">{{ message }}</span>
     </div>
@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import mixin from "../../../mixins/index.js"
 export default {
   props: {
     message: String,
@@ -17,7 +18,7 @@ export default {
       default: 'middle'
     }
   },
-
+  mixins: [mixin],
   data () {
     return {
       visible: false
