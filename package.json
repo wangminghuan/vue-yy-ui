@@ -1,7 +1,7 @@
 {
   "name": "vue-yy-ui",
   "description": "一个基于Vue的移动端UI库",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "wangminghuan",
   "license": "MIT",
   "private": false,
