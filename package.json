@@ -1,7 +1,7 @@
 {
   "name": "vue-yy-ui",
   "description": "一个基于Vue的移动端UI库",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "wangminghuan",
   "license": "MIT",
   "private": false,
@@ -22,7 +22,7 @@
     "build-bundle": "vue-cli-service build --target lib --name yy-ui ./src/bundle.js"
   },
   "dependencies": {
-    "vue": "^2.5.17"
+    "vue": "^2.5.17",
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.5",

@@ -1,28 +1,27 @@
 module.exports = {
-  productionSourceMap: false,
+  productionSourceMap: false,//生产环境是否生成 sourceMap 文件
   runtimeCompiler: true,
-  // configureWebpack: config => {
-  //   if (process.env.NODE_ENV === 'production') {
-  //     // 为生产环境修改配置...
-  //      //vue源码不被打包进去
-  //     config.externals={
-  //       'vue': 'Vue'
-  //     }
-  //   } else {
-  //     // 为开发环境修改配置...
-  //     config.resolve={
-  //       alias: {
-  //         'vue$': 'vue/dist/vue.esm.js' 
-  //       }
-  //     }
-  //   }
-  //   return config;
-  // },
+  configureWebpack: config => {
+    if (process.env.NODE_ENV === 'production') {
+      // 为生产环境修改配置...
+       //vue源码不被打包进去
+      config.externals={
+        'vue': 'Vue'
+      }
+    } else {
+      // 为开发环境修改配置...
+      config.resolve={
+        alias: {
+          'vue$': 'vue/dist/vue.esm.js' 
+        }
+      }
+    }
+  },
   devServer: {
     //反向代理设置
     proxy: {
-      '/api': {
-        target: 'http://xxx.host.com',
+      '/system': {
+        target: 'https://www.inswindows.com',
         ws: true,
         changeOrigin: true
       },
