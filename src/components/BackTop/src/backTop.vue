@@ -1,3 +1,4 @@
+
 <template>
   <div :class="[cssPrefix+'-back-top']"
        @click="handleClick">
@@ -85,26 +86,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../../styles/common/variables.scss';
-.#{$css-prefix} {
-  &-back-top {
-    position: fixed;
-    right: 10px;
-    bottom: 42px;
-    z-index: 999;
-    span {
-      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABSCAMAAADw8nOpAAAAllBMVEUAAADr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+v29vaZmZnz8/Pr6+vw8PDt7e3p6em0tLSkpKSdnZ3Jycmjo6Ompqbc3NzBwcGtra1dbEnwAAAAInRSTlMAC094R531uIIVAnbp3NfRmIh7cmwzp767lJBfXKjthkkqC81vPQAAAlpJREFUWMPF2WlzgjAQBuBwKoqI9ehlr3Q3tMVq+///XJlMMxmHEjawTt8Z/eQ8gsRNshF9yeLN7U2Rp5g+LpY3t5s4E2MShHdLrJQCkDoASlW4vAuDYd4s3jUcyFagYXfxzP8C51hZrs1WOA/8wCkq2ROFUw80sqAbjYhgONEgCZ2EFHGFIMkBXPWC20RJr6hk6xb3CNIzgHuXuDain7nuFq+M6GtedYqVHJiqw1wbcYj5573fIwwnAe/b4laLI8z2WEpAjgokrf+MkiOjVudiiHJ0MDwjJzCehMlZNVOSISqyYoCSJWhr8lTxkGrauki+y5wrLlLNf2dXlGzBmSbjznJxqF//Tn3oKh+xJnfQRVqxZXaNzQfzcFiu0j6gsJKMqcKGLIGThLIhF7zkQogMiZ890b4aMzuE3MHj6xFJP+YzsQi9fTTP+QNp5SgBokg0IRHXQBOpJlyLAkiiMd96yULkNPFdvyhmLlKaCM0bkMxUYJ/4qUXZvEuSiSKliZokmSgeaaImSWYqFhTRkBQzF0sgiIY05me3CYVzqB+tqElrHl1DPXGQtRYtac26m0ycZeP0/QWyRUr4+j45ygahuFmSWNwy5CUxMxPFeNJOFKLkJUsz6XKQdtINkIu0a7cH0p3X52PRuYAhDqNDfaDcd3yBxSD7kjW6zMKaf/nPv0nh30rxb/j4t6X8m2f+LT5/I4K/XcLf1Ll068kmGtggc7VGNwhDxI272ah8RYV74cxLWXmK5Yvoy5Nf4/aJv73M3gTnb9WzHyj8/7HHiMMZ+hESpnlBOkL6AWL3v9N0jqX+AAAAAElFTkSuQmCC)
-        no-repeat;
-      width: 40px;
-      height: 40px;
-      background-size: 40px auto;
-      &.show {
-        display: block;
-      }
-      &.hide {
-        display: none;
-      }
-    }
-  }
-}
+@import "../../../styles/components/BackTop.scss";
 </style>

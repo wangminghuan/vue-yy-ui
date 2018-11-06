@@ -1,10 +1,6 @@
-// import Vue from "vue";
-// import mixin from "./mixins/index";
-import "./styles/base.scss";
-import Toast from "./packages/Toast/index";
-import BackTop from "./packages/backTop/index";
+import Toast from "./components/Toast/index";
+import BackTop from "./components/BackTop/index";
 const Version = '1.0.0';
-// Vue.mixin(mixin)
 BackTop.install = function (Vue) {
   Vue.component(BackTop.name, BackTop)
 }
@@ -13,7 +9,7 @@ const components = [
   BackTop
 ]
 
-const install = (Vue, opts = {})=> {
+const install = (Vue)=> {
   components.forEach(component => {
     Vue.component(component.name, component)
   })

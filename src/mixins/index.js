@@ -1,5 +1,5 @@
 
-const cssPrefix="yys-ui";
+const cssPrefix="yy-ui";
 export default {
   data(){
     return{
